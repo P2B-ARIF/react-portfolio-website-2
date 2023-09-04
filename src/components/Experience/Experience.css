@@ -1,0 +1,163 @@
+.experience__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.experience__container > div {
+  background: var(--color-bg-variant);
+  padding: 2.4rem 5rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  position: relative;
+}
+/* .experience__container > div::before{
+    background-color: aliceblue;
+    content: '< Front-End />';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    z-index: 11;
+} */
+
+.experience__container > div:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.experience__details {
+  color: aliceblue;
+}
+
+.experience__container > div h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+.experience__container:hover > div h4 {
+  color: var(--color-primary);
+}
+.experience__container:hover > div small {
+  color: var(--color-bg-variant);
+}
+
+.experience__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+}
+
+.experience__details-icon {
+  margin-top: 6px;
+  color: var(--color-primary);
+}
+/* 
+.experience__frontend{
+} */
+
+#experience {
+  position: relative;
+}
+
+#experience .experience_text {
+  display: flex;
+  justify-content: center;
+}
+
+.experience_text_h5 {
+  position: relative;
+  width: 200px;
+}
+.experience_text_h5::before {
+  content: "What Skills I Have";
+  position: absolute;
+  top: 22%;
+  right: -2%;
+  z-index: 54;
+  font-weight: bold;
+  color: #064b7d;
+}
+
+.experience_text_h2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#27276e, #0943ad4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.experience_text_h2 > .span {
+  width: 200px;
+  height: 2px;
+  background-color: #064b7d6c;
+}
+
+@media screen and (max-width: 1024px) {
+  .experience__container {
+    grid-template-columns: 1fr;
+  }
+  .experience__container > div {
+    width: 80%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+
+  .experience__content {
+    padding: 1rem;
+  }
+
+  .experience_text_h5::before {
+    top: 15%;
+    right: 0%;
+    font-size: 1rem;
+  }
+  .experience_text_h2 {
+    font-size: 2.5rem;
+  }
+  .experience_text_h2 > .span {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .experience__container {
+    gap: 1rem;
+  }
+
+  .experience__container > div {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+  /* #experience .experience_text {
+    display: flex;
+    justify-content: right;
+  } */
+  .experience_text_h5 {
+    position: relative;
+    width: 120px;
+  }
+  
+  .experience_text_h5::before {
+    top: 9%;
+    left: 20%;
+    font-size: 0.65rem;
+  }
+  
+  .experience_text_h2 {
+    font-size: 1.5rem;
+    position: relative;
+    right: 0%;
+    top: 0;
+  }
+  .experience_text_h2 > .span {
+    width: 40px;
+  }
+}

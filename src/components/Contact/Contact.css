@@ -1,0 +1,211 @@
+.container.contact__container {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 35% 55%;
+  gap: 12%;
+}
+#contact {
+  overflow: hidden;
+}
+.contact__options {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1.2rem; */
+}
+
+.contact__option {
+  /* background: var(--color-bg-variant); */
+  padding: 0.5rem;
+  border-radius: 1.2rem;
+  /* text-align: center; */
+  border: 1px solid transparent;
+  transition: var(--transition);
+  display: flex;
+
+
+}
+.contact_bg_hover{
+  height: 25px;
+
+}
+.contact-option-icon {
+  font-size: 1.5rem;
+  /* color: var(--color-primary); */
+  position: relative;
+  color: #0daaaa;
+}
+.dag {
+  /* content: ""; */
+  position: absolute;
+  top: 28px;
+  left: 19px;
+  width: 2px;
+  height: 86%;
+  z-index: 44;
+  background-color: #0daaaa;
+}
+.contact__option:hover .dag::before{
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 270px;
+  height: 100%;
+  z-index: 44;
+  background-color: #0daaaa51;
+  border-radius: 5px;
+}
+
+.social_details {
+  margin-left: 0.5rem;
+}
+.social_details:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+}
+.contact__option h4 {
+  color: #084c86;
+}
+.contact__option h5 {
+  color: #0d518c;
+}
+.contact__option:hover h4 {
+  color: white;
+  position: relative;
+  z-index: 100;
+}
+.contact__option:hover h5 {
+  color: white;
+  position: relative;
+  z-index: 100;
+}
+.contact__option:hover p {
+  color: white;
+  position: relative;
+  z-index: 100;
+}
+
+.contact__option-icon {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact__option a {
+  margin-top: 0.7rem;
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #064b7d;
+}
+.contact__option:hover a {
+  color: var(--color-primary);
+}
+.contact__option:hover h4 {
+  color: var(--color-primary);
+}
+.contact__option:hover h5 {
+  color: var(--color-primary);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 1px solid green;
+  resize: none;
+  color: var(--color-bg);
+}
+.textarea{
+  height: 170px !important;
+}
+
+.textarea:focus {
+  /* border: 1px solid transparent !important; */
+  box-shadow: none !important;
+  /* outline: none !important ; */
+}
+#contact {
+  position: relative;
+}
+
+#contact .contact_text {
+  display: flex;
+  justify-content: center;
+}
+
+.contact_text_h5 {
+  position: relative;
+  width: 100px;
+}
+.contact_text_h5::before {
+  content: "Get In Touch";
+  position: absolute;
+  top: 22%;
+  right: -3%;
+  z-index: 54;
+  font-weight: bold;
+  color: #064b7d;
+}
+
+.contact_text_h2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#27276e, #0943ad4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contact_text_h2 > .span {
+  width: 200px;
+  height: 2px;
+  background-color: #064b7d6c;
+}
+
+@media screen and (max-width: 1024px) {
+  .container.contact__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact_text_h5::before {
+    top: 18%;
+    right: -2%;
+    font-size: 1rem;
+  }
+  .contact_text_h2 {
+    font-size: 3.5rem;
+  }
+  .contact_text_h2 > .span {
+    width: 140px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container.contact__container {
+    width: var(--container-width-sm);
+  }
+  .contact_text_h5{
+    width: 80px;
+  }
+  .contact_text_h5::before {
+    top: 12%;
+    right: -2%;
+    font-size: 0.8rem;
+  }
+  .contact_text_h2 {
+    font-size: 1.9rem;
+  }
+  .contact_text_h2 > .span {
+    width: 50px;
+  }
+}

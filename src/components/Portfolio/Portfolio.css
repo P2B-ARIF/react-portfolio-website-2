@@ -1,0 +1,416 @@
+.portfolio__container {
+  /* display: grid; */
+  /* grid-template-columns: repeat(3, 1fr); */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  column-gap: 0.5rem;
+  row-gap: 2rem;
+}
+
+/**Testing start */
+.longImage {
+  width: 100%;
+  height: 100%;
+  object-position: top;
+  transition: all .3s ease;
+}
+
+.longImage.red:hover {
+  border: 1px solid #ffa1a18c;
+  }
+.longImage.purple:hover {
+  border: 1px solid #f1a1ff8c;
+}
+.longImage.blue:hover {
+  border: 1px solid #a1aaff8c;
+}
+
+.longImage:hover {
+  height: 100%;
+  object-position: top;
+  transition: all 0.3s ease-in-out;
+  animation-name: imageLong;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+}
+@keyframes imageLong {
+  0% {
+    object-position: top;
+  }
+  70% {
+    object-position: bottom;
+  }
+  100% {
+    object-position: top;
+  }
+}
+
+/* Testing End  */
+
+.portfolio__item {
+  background: var(--color-bg-variant);
+  /* background: var(--color-primary-variant); */
+  padding: 1rem;
+  /* border-radius: 1rem; */
+  border: 1px solid transparent;
+  transition: var(--transition);
+  border: 2px solid transparent;
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
+}
+
+.portfolio__item:hover {
+  border: 2px solid var(--color-primary-variant);
+  background: transparent;
+}
+
+.portfolio__item-image {
+  /* border-radius: .7rem; */
+  overflow: hidden;
+  height: 200px;
+  position: relative;
+}
+
+.black_diamond:hover::before {
+  content: "This website-based photography with different event wedding/ Fusion/ Corporate/ Product  • Used: Tailwind CSS | React Js | Node Js | Express Js | MongoDB";
+  line-break: loose;
+  padding: 1.5rem;
+  position: absolute;
+  font-size: 0.9rem;
+  top: 0;
+  left: 0;
+  width: 82%;
+  height: 100%;
+  color: white;
+  font-weight: 500;
+  /* background-color:; */
+  background: linear-gradient(145deg, rgba(3, 38, 95, 0.701), transparent);
+  backdrop-filter: blur(1px);
+}
+.mobile_resell:hover::before {
+  content: "We can resell four types of mobiles here. seller can advertise her phone for buyers and add products, buyer can report and pay. Admin can all control  • Used: React Js | Node Js | Express Js | Firebase | MongoDB | (TanStack, Flowbite, Axios, Stripe)";
+  line-break: loose;
+  padding: 1.5rem;
+  position: absolute;
+  font-size: 0.8rem;
+  top: 0;
+  left: 0;
+  width: 82%;
+  height: 100%;
+  color: white;
+  font-weight: 500;
+  /* background-color:; */
+  background: linear-gradient(145deg, rgba(3, 38, 95, 0.701), transparent);
+  backdrop-filter: blur(1px);
+}
+.zerone:hover::before {
+  content: "Learning an 8-type programming language has a Fully responsive • Used: Tailwind CSS | React Js | Node Js | Express Js | MongoDB,";
+  line-break: loose;
+  padding: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 82%;
+  height: 100%;
+  color: white;
+  font-weight: 500;
+  /* background-color:; */
+  background: linear-gradient(145deg, rgba(3, 38, 95, 0.701), transparent);
+  backdrop-filter: blur(1px);
+}
+
+.portfolio__item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .portfolio__item-image{ */
+
+.btn_p {
+  width: max-content;
+  display: inline-block;
+  color: var(--color-primary);
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+  transition: var(--transition);
+}
+
+.btn_p:hover {
+  background: var(--color-white);
+  color: var(--color-primary);
+  /* border-color: transparent; */
+  border: 1px solid #c5c5c5;
+}
+
+.btn-primary_p {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.portfolio__item h3 {
+  /* margin: 1.2rem 0 2rem; */
+  margin: 1rem 0;
+  color: aliceblue;
+}
+.portfolio__item:hover h3 {
+  color: var(--color-bg-variant);
+}
+.portfolio__item-cta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  width: 320px;
+  /* height: 300px; */
+  margin: 0 auto;
+  /* background-color: #011522; */
+  border-radius: 8px;
+  z-index: 1;
+  background: #a40303;
+  background: linear-gradient(357deg, #ffffff00 0%, #ca005f 100%, #ca005f 100%);
+  transition: all 0.3s ease;
+}
+.card.red {
+  background: #a40303;
+  background: linear-gradient(357deg, #ffffff00 0%, #a001a0 100%, #d33c83 100%);
+}
+.card.blue {
+  background: #a40303;
+  background: linear-gradient(357deg, #ffffff00 0%, #187ad5 100%, #ca005f 100%);
+}
+
+.card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+}
+
+.circle {
+  padding: 0 4px;
+}
+
+.box {
+  display: inline-block;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: #ff605c;
+}
+.yellow {
+  background-color: #ffbd44;
+}
+.green {
+  background-color: #00ca4e;
+}
+
+.card__content {
+  padding: 1rem;
+}
+.card__content h3 {
+  color: rgb(142, 255, 104);
+}
+.card__content .second {
+  color: rgb(255, 167, 104);
+}
+.card__content .third {
+  color: rgb(255, 104, 104);
+}
+.card__content h4 {
+  color: #d2d0d0;
+  margin: 0.5rem 0;
+}
+.card__content p {
+  color: #c0bfbf;
+  font-size: 0.8rem;
+}
+
+/* button css start */
+.btn-details {
+  display: flex;
+  justify-content: right;
+  margin-right: 1rem;
+}
+.button_details {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+  font-size: 0.9rem;
+  background: #333;
+  border: none;
+  color: #fff;
+}
+
+.card:hover .button_details {
+  letter-spacing: 0.15em;
+  background: #ff1867;
+  color: #ff1867;
+  /* box-shadow: 0 0 45px #ff1867; */
+}
+
+.button_details::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: #222222;
+}
+
+.button_details span {
+  position: relative;
+  z-index: 1;
+}
+
+.button_details i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.button_details i::before {
+  content: "";
+  position: absolute;
+  border: 2px solid #ff1867;
+  width: 7px;
+  height: 4px;
+  top: -3.5px;
+  left: 80%;
+  background: #222222;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+.button_details:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+
+.button_details i::after {
+  content: "";
+  position: absolute;
+  border: 2px solid #ff1867;
+  width: 7px;
+  height: 4px;
+  bottom: -3.5px;
+  left: 20%;
+  background: #222222;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+.button_details:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+
+/* button css end */
+
+#portfolio {
+  position: relative;
+}
+
+#portfolio .portfolio_text {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio_text_h5 {
+  position: relative;
+  width: 150px;
+}
+.portfolio_text_h5::before {
+  content: "My Recent Work";
+  position: absolute;
+  top: 23%;
+  right: -3%;
+  z-index: 54;
+  font-weight: bold;
+  color: #064b7d;
+}
+
+.portfolio_text_h2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#27276e, #0943ad4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.portfolio_text_h2 > .span {
+  width: 200px;
+  height: 2px;
+  background-color: #064b7d6c;
+}
+/* @media screen and (max-width: 1111px) {
+
+  .card {
+    width:290px;
+  }
+} */
+@media screen and (max-width: 1040px) {
+  .portfolio__container {
+    /* grid-template-columns: 1fr 1fr; */
+    row-gap: 3rem;
+  }
+  /* .card {
+    width:300px;
+  } */
+
+  .portfolio_text_h5::before {
+    top: 17%;
+    right: -2%;
+    font-size: 1rem;
+  }
+  .portfolio_text_h2 {
+    font-size: 3rem;
+  }
+  .portfolio_text_h2 > .span {
+    width: 140px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* .card {
+    width:320px;
+  }
+  .portfolio__container {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  } */
+
+  .portfolio_text_h5::before {
+    top: 12%;
+    right: -1%;
+    font-size: 0.8rem;
+  }
+
+  .portfolio_text_h2 {
+    font-size: 2rem;
+  }
+
+  .portfolio_text_h2 > .span {
+    width: 50px;
+  }
+}
